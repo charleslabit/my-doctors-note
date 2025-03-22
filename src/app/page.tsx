@@ -1,36 +1,20 @@
+import { CallToAction } from "@/components/CallToAction";
 import { InfoGrid } from "@/components/InfoGrid";
 import { StepsCards } from "@/components/StepsCards";
 import {
   AspectRatio,
   Box,
-  Button,
   Card,
-  Center,
   Container,
   Group,
   Stack,
   Text,
-  Title,
 } from "@mantine/core";
-import { IconArrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <Center p={"20px 50px"} m="0 17px">
-        <Box p={7.5}>
-          <Image
-            width={240}
-            height={29.5}
-            src={
-              "https://mydoctorsnote.co/cdn/shop/files/bcnjac0hn1ggv3xvmavh.webp?v=1740566885&width=600"
-            }
-            alt="My Doctors Note"
-          />
-        </Box>
-      </Center>
-
       <Box pos="relative">
         <AspectRatio ratio={16 / 9} h={503}>
           <Image
@@ -69,72 +53,47 @@ export default function Home() {
           }}
         >
           <Stack align="center" gap="md">
-            <Text fw={700} fz={50}>
+            <Text fw={700} fz={50} lh={1}>
               Your Doctor's Note
             </Text>
-            <Text fw={600} fz={50}>
+            <Text fw={600} fz={50} lh={1}>
               In 1 Minute, for $29.99!
             </Text>
-            <Button
-              w={350}
-              h={60}
-              fz={18}
-              radius="md"
-              c="white"
-              bg="#2323F3"
-              p="14px 20px"
-              rightSection={<IconArrowRight />}
-            >
-              Get your Note Now
-            </Button>
-            <Box w={350}>
-              <Text fz={16}> ✅ 100% Risk-Free Money Back Guarantee</Text>
-            </Box>
+            <Image
+              src={
+                "https://cdn.prod.website-files.com/674755c8acccd926c40d29ae/677ec92e3d12277fa484e390_Vector%206599.svg"
+              }
+              alt="My Doctors Note"
+              width={434}
+              height={9.75}
+            />
+
+            <CallToAction label="Get your Note Now" c="white" />
           </Stack>
         </Box>
       </Box>
 
-      <Stack align="center">
+      <Stack align="center" p={"30px 0"}>
         <Box>
-          <Text fz={48}>Get An Online Doctor's</Text>
-          <Text fz={48}> Note In 3 Easy Steps</Text>
+          <Text fz={48} fw={600} lh={1} ta="center">
+            Get An Online Doctor's
+          </Text>
+          <Text fz={48} fw={600} lh={1} ta="center">
+            Note In 3 Easy Steps
+          </Text>
         </Box>
-        <Text fz={18}>
+        <Text fz={18} lh={1}>
           With our online platform we make it quick and simple for you to obtain
         </Text>
-        <Text fz={18}>
+        <Text fz={18} lh={1}>
           a doctors note, so you can focus on rest and recovery.
         </Text>
         <StepsCards />
-        <Stack align="center" gap="md">
-          {/* CTA Button */}
-          <Button
-            radius="md"
-            color="#2323F3"
-            rightSection="→"
-            fw="bold"
-            fz={16}
-          >
-            Get your Note Now
-          </Button>
 
-          {/* Guarantee Section */}
-          <Group gap={10}>
-            <Image
-              src="https://cdn.prod.website-files.com/674755c8acccd926c40d29ae/677ed137d0a7cf57ffb400b3_617922efaeb3a92e70ebd1b3_Security%2520Icon.svg%20fill.svg"
-              height={32}
-              width={33}
-              alt="Shield Check"
-            />
-
-            <Text size="sm" c="#626262">
-              100% Risk-Free Money Back Guarantee
-            </Text>
-          </Group>
-        </Stack>
+        <CallToAction />
       </Stack>
 
-      <Container size={1200} py="xl">
+      <Container size={1200} p="30px 0">
         {/* Money Back Guarantee Banner */}
         <Card radius="md" shadow="sm" p="lg" bg="teal.1">
           <Group align="center" justify="center">
@@ -149,52 +108,43 @@ export default function Home() {
               <Text fw={700} fz={32}>
                 Money Back Guarantee!
               </Text>
-              <Text fz={18}>
-                We will refund 100% of your payment if you're not fully
-                satisfied.
+              <Text fz={18} lh={1}>
+                We will refund 100% of your payment, in case you're not 100%
+              </Text>
+              <Text fz={18} lh={1}>
+                satisfied with our service.
               </Text>
             </Stack>
           </Group>
         </Card>
 
         {/* Hero Section */}
-        <Stack align="center" gap="xs" mt="lg">
-          <Title order={2}>Get Peace of Mind</Title>
-          <Title order={3} c="blue">
-            With My Doctors Note
-          </Title>
-          <Text ta="center" maw={600}>
-            My Doctor’s Note provides a fast, hassle-free solution for obtaining
-            excuse notes.
+        <Stack align="center" gap="xs" mt={20} mb={20}>
+          <Text fz={48} fw={600} lh={1}>
+            Get Peace of Mind
           </Text>
+          <Text fz={48} c="#2323FD" fw={600} lh={1}>
+            With My Doctors Note
+          </Text>
+          <Image
+            src="https://cdn.prod.website-files.com/674755c8acccd926c40d29ae/678b383926e210a9cdedefc3_Vector%206601.svg"
+            height={8}
+            width={263}
+            alt="Curve Line"
+          />
+          <Box>
+            <Text fz={18} lh={1.5}>
+              My Doctor’s Note provides a fast, hassle-free solution for
+              <br /> obtaining excuse notes. Focus on your recovery while we
+              <br /> take care of the paperwork, delivering your note in
+              minutes..
+            </Text>
+          </Box>
         </Stack>
 
         <InfoGrid />
 
-        {/* Call-To-Action */}
-        <Stack align="center" mt="xl">
-          <Button
-            size="lg"
-            radius="md"
-            color="#2323F3"
-            rightSection={<IconArrowRight size={18} />}
-          >
-            Get your Doctors Note Now
-          </Button>
-          {/* Guarantee Section */}
-          <Group gap={10}>
-            <Image
-              src="https://cdn.prod.website-files.com/674755c8acccd926c40d29ae/677ed137d0a7cf57ffb400b3_617922efaeb3a92e70ebd1b3_Security%2520Icon.svg%20fill.svg"
-              height={32}
-              width={33}
-              alt="Shield Check"
-            />
-
-            <Text size="sm" c="#626262">
-              100% Risk-Free Money Back Guarantee
-            </Text>
-          </Group>
-        </Stack>
+        <CallToAction />
       </Container>
     </>
   );

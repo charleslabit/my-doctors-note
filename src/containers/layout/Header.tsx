@@ -27,12 +27,10 @@ export const Header = () => {
   };
 
   return (
-    <>
-      <Center bg="#2323FD" p="10px 0px">
-        <Text c="white" fw={600} fz={16}>
-          30% OFF If you order in the next {formatTime(timeLeft)}
-        </Text>
-      </Center>
-    </>
+    <Center bg="#2323FD" p="10px 0px">
+      <Text c="white" fw={600} fz={16}>
+        30% OFF If you order in the next {formatTime(timeLeft)}
+      </Text>
+    </Center>
   );
 };

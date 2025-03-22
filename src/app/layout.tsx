@@ -18,7 +18,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/next.svg" />
+        <link
+          rel="icon"
+          href="https://mydoctorsnote.co/cdn/shop/files/Medexcuse_favicon.png?crop=center&height=32&v=1740244640&width=32"
+        />
       </head>
       <body>
         <ThemeProvider>

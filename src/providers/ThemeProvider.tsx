@@ -35,7 +35,15 @@ const themeComponents = {
   Text: {
     defaultProps: {
       fz: 16,
+      lh: 2,
     },
+  },
+  Anchor: {
+    styles: () => ({
+      root: {
+        color: "#121212BF",
+      },
+    }),
   },
 };
 
@@ -52,24 +60,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const theme = createTheme({
     cursorType: "pointer",
     components: themeComponents,
-    primaryColor: "light",
+    primaryColor: "blue",
     fontFamily: "sans-serif",
     white: "#FFFFFF", // Replace white color
     black: "#333333",
-    colors: {
-      light: [
-        "#FFF5E1", // Soft peach for background or light sections
-        "#FFD9B3", // Warm apricot for cards or highlights
-        "#FFB74D", // Vibrant orange for interactive elements
-        "#FF9800", // Bold amber for call-to-action buttons
-        "#F57C00", // Deep orange for hover effects or emphasis
-        "#F44336", // Bright red for sales, alerts, or standout elements
-        "#E91E63", // Vivid pink for accents or playful touches
-        "#9C27B0", // Rich purple for contrast or branding highlights
-        "#673AB7", // Deep violet for headers or text
-        "#3F51B5", // Strong blue for trust-building elements (e.g., checkout)
-      ],
-    },
   });
 
   return (

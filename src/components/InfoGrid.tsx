@@ -7,9 +7,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  ThemeIcon,
 } from "@mantine/core";
-import { IconCheck } from "@tabler/icons-react";
 
 const cardData = [
   {
@@ -116,15 +114,7 @@ function InfoCard({
         <Text fz={24} fw={600}>
           {title}
         </Text>
-        <List
-          spacing="xs"
-          icon={
-            <ThemeIcon color="blue" size={20} radius="xl">
-              <IconCheck size={14} />
-            </ThemeIcon>
-          }
-          c="#585858"
-        >
+        <List spacing="xs" c="#585858">
           {items.map((item, index) => (
             <ListItem key={index}>
               <strong>{item.label}</strong> - {item.desc}
@@ -160,7 +150,7 @@ function PriceCard() {
 
 export function InfoGrid() {
   return (
-    <SimpleGrid cols={2}>
+    <SimpleGrid cols={{ sm: 1, md: 2 }} mt={10}>
       {cardData.map((card, index) => (
         <InfoCard
           key={index}

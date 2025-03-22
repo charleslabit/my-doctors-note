@@ -68,8 +68,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <ColorSchemeScript forceColorScheme={"dark"} />
-      <MantineProvider theme={theme} defaultColorScheme="dark">
+      <ColorSchemeScript forceColorScheme={"light"} />
+      <MantineProvider theme={theme} defaultColorScheme="auto">
         <Notifications position="top-right" />
         <ModalsProvider modalProps={{ centered: true }}>
           {children}

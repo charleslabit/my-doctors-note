@@ -24,19 +24,19 @@ export const CallToAction = ({
   }, [entry?.isIntersecting, hasAnimated]);
   return (
     <Stack align="center" mt="xl">
-      <Button
-        className={hasAnimated ? "fadein" : "hidden"}
-        ref={ref}
-        h={60}
-        w={350}
-        p="14px 20px"
-        radius="md"
-        color="#2323F3"
-        rightSection={<IconArrowRight size={18} />}
-        fz={18}
-      >
-        {label}
-      </Button>
+      <div ref={ref} className={hasAnimated ? "fadein" : "hidden"}>
+        <Button
+          h={60}
+          w={350}
+          p="14px 20px"
+          radius="md"
+          color="#2323F3"
+          rightSection={<IconArrowRight size={18} />}
+          fz={18}
+        >
+          {label}
+        </Button>
+      </div>
       {/* Guarantee Section */}
       <Group gap={10}>
         <Image

@@ -1,16 +1,33 @@
 "use client";
 import { Anchor, Center, Divider, Group, Stack, Text } from "@mantine/core";
+import { useIntersection } from "@mantine/hooks";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export const Footer = () => {
   const pathname = usePathname(); // Get the current path
   const router = useRouter();
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const { ref, entry } = useIntersection({
+    root: null, // Uses viewport as the root
+    threshold: 0.5,
+  });
+  useEffect(() => {
+    if (entry?.isIntersecting && !hasAnimated) {
+      setHasAnimated(true); // Mark as animated once it enters
+    }
+  }, [entry?.isIntersecting, hasAnimated]);
 
   const isActive = (href: string) => pathname === href;
   return (
     <>
-      <Center pos="relative" p="0 10px">
+      <Center
+        pos="relative"
+        p="0 10px"
+        ref={ref}
+        className={hasAnimated ? "fadein" : "hidden"}
+      >
         <Group align="start" justify="space-between" w={1200}>
           {/* Brand & Support */}
           <Stack>

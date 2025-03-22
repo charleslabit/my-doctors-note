@@ -10,7 +10,7 @@ export const Footer = () => {
   const isActive = (href: string) => pathname === href;
   return (
     <>
-      <Center pos="relative">
+      <Center pos="relative" p="0 10px">
         <Group align="start" justify="space-between" w={1200}>
           {/* Brand & Support */}
           <Stack>

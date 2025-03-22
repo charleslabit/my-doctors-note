@@ -73,7 +73,7 @@ export default function Home() {
         </Box>
       </Box>
 
-      <Stack align="center" p={"30px 0"}>
+      <Stack align="center" p={"30px 1px0"}>
         <Box>
           <Text fz={48} fw={600} lh={1} ta="center">
             Get An Online Doctor's
@@ -93,7 +93,7 @@ export default function Home() {
         <CallToAction />
       </Stack>
 
-      <Container size={1200} p="30px 0">
+      <Container size={1200} p="30px 10px">
         {/* Money Back Guarantee Banner */}
         <Card radius="md" shadow="sm" p="lg" bg="teal.1">
           <Group align="center" justify="center">

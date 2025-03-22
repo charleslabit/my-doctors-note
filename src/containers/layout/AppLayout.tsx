@@ -21,11 +21,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Header />
       </AppShell.Header>
 
-      <AppShell.Main pb={0} pl={10} pr={10}>
+      <AppShell.Main pb={0}>
         <FloatingNote />
         {children}
       </AppShell.Main>
-      <AppShell.Footer pos="relative" p="36px 10px" mt={50}>
+      <AppShell.Footer pos="relative" p="36px 0" mt={50}>
         <Footer />
       </AppShell.Footer>
     </AppShell>

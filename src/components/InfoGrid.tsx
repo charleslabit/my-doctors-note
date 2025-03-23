@@ -109,7 +109,7 @@ function InfoCard({
   footer?: React.ReactNode;
 }) {
   return (
-    <Card shadow="sm" p="md" radius="md" bg="#D8E8FD">
+    <Card shadow="sm" p={30} radius="md" bg="#D8E8FD">
       <Stack gap="xs">
         <Text fz={24} fw={600}>
           {title}
